@@ -23,5 +23,5 @@ sequenceDiagram
     Screen Factory->>Warehouse: deliver
     Note over Warehouse: Count
     Note over Warehouse: Attach barcode
-    Note over Warehouse: Add to POS
+    Note over Warehouse: Add to Backoffice
 ```

@@ -7,7 +7,7 @@ flowchart TD
     AddProduct --> Shipnity[(Shipnity)]
     
     subgraph channel
-        Shipnity[(Shipnity)] --> StorehubWarehouse
+        Shipnity[(Shipnity)]-- stock transfer --> StorehubWarehouse
         StorehubWarehouse[(Storehub Warehouse)] --> StorehubBranch[(Storehub Branch)] & GoogleSheets[(Google Sheets)]
     end
 

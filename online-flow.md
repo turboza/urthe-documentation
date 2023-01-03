@@ -8,11 +8,11 @@
 ```mermaid
 sequenceDiagram
     participant Warehouse
-    participant POS Shipnity
+    participant Shipnity
 
     autonumber
 
-    Warehouse->>POS Shipnity: Add products
+    Warehouse->>Shipnity: Add products
 ```
 
 ## Line, Facebook, Instagram
@@ -24,7 +24,7 @@ sequenceDiagram
     actor office
     participant Google Sheets
     actor accounting
-    participant POS Shipnity
+    participant Shipnity
     participant Thai Post
     participant Warehouse
     actor courier
@@ -35,12 +35,12 @@ sequenceDiagram
     office->>Google Sheets: Add order to Google Sheets
     accounting->>Google Sheets: Reconcile deposit amount from Google Sheets
     Note left of accounting: Change background color for status flag
-    office->>POS Shipnity: Add order to Shipnity (1 qty per order)
-    office->>POS Shipnity: Print order from Shipnity (1 qty per row)
+    office->>Shipnity: Add order to Shipnity (1 qty per order)
+    office->>Shipnity: Print order from Shipnity (1 qty per row)
     office->>Thai Post: Input shipping detail for attachment
     office->>Warehouse: Pack
     office->>Thai Post: Print tracking number and attach
-    office->>POS Shipnity: Update tracking number in Shipnity
+    office->>Shipnity: Update tracking number in Shipnity
     courier->>Warehouse: Pickup orders
     Note over courier: pickup orders at 3pm daily
     courier->>customer: Deliver orders
@@ -54,7 +54,7 @@ sequenceDiagram
 sequenceDiagram
     actor office
     participant Google Sheets
-    participant POS Shipnity
+    participant Shipnity
     participant Warehouse
     actor courier
     actor customer
@@ -62,9 +62,9 @@ sequenceDiagram
     autonumber
 
     office->>Google Sheets: Add order from Shipnity to Google Sheets
-    office->>POS Shipnity: Print order from Shipnity (1 qty per row)
+    office->>Shipnity: Print order from Shipnity (1 qty per row)
     office->>Warehouse: Pack
-    office->>POS Shipnity: Update tracking number in Shipnity
+    office->>Shipnity: Update tracking number in Shipnity
     courier->>Warehouse: Pickup orders
     Note over courier: pickup orders at 3pm daily
     courier->>customer: Deliver orders
