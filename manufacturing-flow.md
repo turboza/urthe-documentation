@@ -12,16 +12,16 @@ sequenceDiagram
 
     autonumber
 
-    Note over Office: design
+    Office->>Office: Design
     Office->>Fabric Factory: order textile (type, color, amount)
     car 1->>Fabric Factory: pickup textile
     car 1->>Garment Factory: deliver textile
-    Note over Garment Factory: iron, pack
+    Garment Factory->>Garment Factory: iron, pack
     car 2->>Garment Factory: pickup textile
     car 2->>Screen Factory: deliver textile
-    Note over Screen Factory: screen
+    Screen Factory->>Screen Factory: screen
     Screen Factory->>Warehouse: deliver
-    Note over Warehouse: Count
-    Note over Warehouse: Attach barcode
-    Note over Warehouse: Add to Backoffice
+    Warehouse->>Warehouse: Count
+    Warehouse->>Warehouse: Attach barcode
+    Warehouse->>Warehouse: Add to Backoffice
 ```
